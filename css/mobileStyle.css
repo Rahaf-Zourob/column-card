@@ -21,7 +21,7 @@
 }
 
 @media (max-width:769px) and (min-width:675px) {
-    section article {
+    main section.section__content article {
         grid-template-rows: 5fr 1fr;
     }
     main section.section__content article p {
