@@ -1,9 +1,116 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --tansparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%)
+}
+
 @font-face {
     font-family: Lexend Deca;
-    src: url("../fonts/LexendDeca-Medium.ttf");
+    src: url("../fonts/LexendDeca-Regular.ttf");
 }
+
 @font-face {
     font-family: Big Shoulders Display;
     src: url("../fonts/BigShouldersDisplay-ExtraBold.ttf");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: Big Shoulders Display;
+    font-weight: 700;
+}
+
+p,
+button,
+a {
+    font-family: Lexend Deca;
+}
+
+main .container {
+    min-height: 95vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main .container section#sedans__section {
+    background-color: var(--bright-orange);
+}
+
+main .container section#suvs__section {
+    background-color: var(--dark-cyan);
+}
+
+main .container section#luxury__section {
+    background-color: var(--very-dark-cyan);
+}
+
+main .container section button#sedans__btn {
+    color: var(--bright-orange);
+}
+
+main .container section button#suvs__btn {
+    color: var(--dark-cyan);
+}
+
+main .container section button#luxury__btn {
+    color: var(--very-dark-cyan);
+}
+
+main .container section.section__content {
+    width: 100%;
+    padding: 20%;
+}
+
+main section.section__content h3 {
+    letter-spacing: 1px;
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: var(--very-light-gray);
+}
+
+main section.section__content p {
+    font-size: 1.09rem;
+    line-height: 1.8rem;
+    color: var(--tansparent-white);
+    grid-column: 1/-1;
+}
+
+main .container section article {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 4fr 1fr;
+}
+
+main .container section.section__content article button {
+    cursor: pointer;
+    display: block;
+    grid-column: 1/2;
+    justify-content: start;
+    font-size: 1.1rem;
+    padding: 1rem 2.6rem;
+    border-radius: 2rem;
+    border: 2px solid var(--very-light-gray);
+    background-color: var(--very-light-gray);
+}
+
+main .container section.section__content button:is(#sedans__btn, #suvs__btn, #luxury__btn):hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+}
+
+footer {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+footer p a {
+    text-decoration: none;
+    color: var(--dark-cyan);
+}
